@@ -9,7 +9,7 @@ const Sidebar = () => {
     {/* Brand Logo */}
     <Link to="/" className="brand-link">
       <img
-        src="dist/img/AdminLTELogo.png"
+        src="img/AdminLTELogo.png"
         alt="AdminLTE Logo"
         className="brand-image img-circle elevation-3"
         style={{ opacity: ".8" }}
@@ -22,7 +22,7 @@ const Sidebar = () => {
       <div className="user-panel mt-3 pb-3 mb-3 d-flex">
         <div className="image">
           <img
-            src="dist/img/user2-160x160.jpg"
+            src="img/user2-160x160.jpg"
             className="img-circle elevation-2"
             alt="User Image"
           />
@@ -57,7 +57,15 @@ const Sidebar = () => {
               <i className="nav-icon far bi bi-laptop" />
               {/* <i className="fa-solid fa-laptop" /> */}
 
-              <p>assets</p>
+              <p>Assets</p>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/create-asset" className="nav-link">
+              <i className="nav-icon far bi bi-plus" />
+              {/* <i className="fa-solid fa-laptop" /> */}
+
+              <p>Create Asset</p>
             </Link>
           </li>
           <li className="nav-item">
@@ -71,38 +79,9 @@ const Sidebar = () => {
               <i className="nav-icon far fa-calendar-alt" />
               <p>
                 Calendar
-                <span className="badge badge-info right">2</span>
+
               </p>
             </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="#" className="nav-link">
-            <i className="nav-icon far bi bi-clipboard-data" />
-              <p>
-                Reports
-                <i className="fas fa-angle-left right" />
-              </p>
-            </Link>
-            <ul className="nav nav-treeview">
-              <li className="nav-item">
-                <Link to="#" className="nav-link">
-                  <i className="far fa-circle nav-icon" />
-                  <p>By employee</p>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <a to="pages/mailbox/compose.html" className="nav-link">
-                  <i className="far fa-circle nav-icon" />
-                  <p>By date</p>
-                </a>
-              </li>
-              <li className="nav-item">
-                <Link to="pages/mailbox/read-mail.html" className="nav-link">
-                  <i className="far fa-circle nav-icon" />
-                  <p>By asset</p>
-                </Link>
-              </li>
-            </ul>
           </li>
          
          
@@ -146,6 +125,35 @@ const Sidebar = () => {
                <i className="nav-icon far bi bi-person-plus" />
               <p>Register new employees</p>
             </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="#" className="nav-link">
+            <i className="nav-icon far bi bi-clipboard-data" />
+              <p>
+                Reports
+                <i className="fas fa-angle-left right" />
+              </p>
+            </Link>
+            <ul className="nav nav-treeview">
+              <li className="nav-item">
+                <Link to="#" className="nav-link">
+                  <i className="far fa-circle nav-icon" />
+                  <p>By employee</p>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <a to="pages/mailbox/compose.html" className="nav-link">
+                  <i className="far fa-circle nav-icon" />
+                  <p>By date</p>
+                </a>
+              </li>
+              <li className="nav-item">
+                <Link to="pages/mailbox/read-mail.html" className="nav-link">
+                  <i className="far fa-circle nav-icon" />
+                  <p>By asset</p>
+                </Link>
+              </li>
+            </ul>
           </li>
         </ul>
           

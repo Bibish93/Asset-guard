@@ -47,6 +47,7 @@ function App() {
         <Route path='/reservations' element={<Reservations />} />
         <Route path='/damages' element={<Damages />} />
         <Route path='/maintenance' element={<Maintenance />} />
+        <Route path='/create-asset' element={<CreateAsset />} />
 
       </Routes>
     </div>
