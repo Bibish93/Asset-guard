@@ -13,14 +13,7 @@ const ByEmployee = () => {
   <div className="col-sm-6">
     <h1>Checkouts</h1>
   </div>
-  <div className="col-sm-6">
-    <ol className="breadcrumb float-sm-right">
-      <li className="breadcrumb-item">
-        
-      </li>
-      <li className="breadcrumb-item active"></li>
-    </ol>
-  </div>
+  
 </div>
 </div>
 {/* /.container-fluid */}

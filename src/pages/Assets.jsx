@@ -11,15 +11,11 @@ const Assets = () => {
       <div className="container-fluid">
         <div className="row mb-2">
           <div className="col-sm-6">
-            <h1>Employees</h1>
+            <h1>Assets</h1>
           </div>
           <div className="col-sm-6">
-            <ol className="breadcrumb float-sm-right">
-              <li className="breadcrumb-item">
-                <a href="#">Home</a>
-              </li>
-              <li className="breadcrumb-item active">employees</li>
-            </ol>
+            
+            
           </div>
         </div>
       </div>
@@ -33,7 +29,7 @@ const Assets = () => {
             <div className="card">
               <div className="card-header">
                 <h3 className="card-title">
-                  Employee details
+                  Asset details
                 </h3>
               </div>
               {/* /.card-header */}

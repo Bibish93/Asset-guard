@@ -107,13 +107,13 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/damages" className="nav-link">
+                <Link to="damages" className="nav-link">
                   <i className="far fa-circle nav-icon" />
                   <p>damages</p>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/maintenance" className="nav-link">
+                <Link to="maintenance" className="nav-link">
                   <i className="far fa-circle nav-icon" />
                   <p>on maintenance</p>
                 </Link>
