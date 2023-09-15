@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Header = () => {
   return (
     <div>
@@ -14,9 +14,9 @@ const Header = () => {
         </a>
       </li>
       <li className="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" className="nav-link">
+        <Link to="/Asset-guard" className="nav-link">
           Home
-        </a>
+        </Link>
       </li>
     
     </ul>

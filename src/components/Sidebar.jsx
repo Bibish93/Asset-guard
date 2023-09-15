@@ -9,7 +9,7 @@ const Sidebar = () => {
   {/* Main Sidebar Container */}
   <aside className="main-sidebar sidebar-dark-primary elevation-4">
     {/* Brand Logo */}
-    <Link to="/" className="brand-link">
+    <Link to="/Asset-guard" className="brand-link">
       <img
         src={logo}
         alt="AdminLTE Logo"
