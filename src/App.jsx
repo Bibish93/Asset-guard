@@ -36,7 +36,7 @@ function App() {
     
     <div>
       <Routes>
-        <Route path='/' element={<Dashboard />} />
+        <Route path='/Asset-guard' element={<Dashboard />} />
         <Route path='/calendar' element={<Calendar />} />
         <Route path='/create-asset' element={<CreateAsset />} />
         <Route path='/employees' element={<Employees />} />
