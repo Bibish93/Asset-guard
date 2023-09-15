@@ -1,7 +1,7 @@
 {
   "homepage": "http://Bibish93.github.io/Asset-guard",
   "name": "safe_asset",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
