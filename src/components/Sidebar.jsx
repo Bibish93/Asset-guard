@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import pic from "../../img/user2-160x160.jpg"
+import logo from "../../img/AdminLTELogo.png"
 const Sidebar = () => {
   return (
     <div>
@@ -10,7 +11,7 @@ const Sidebar = () => {
     {/* Brand Logo */}
     <Link to="/" className="brand-link">
       <img
-        src="../../img/AdminLTELogo.png"
+        src={logo}
         alt="AdminLTE Logo"
         className="brand-image img-circle elevation-3"
         style={{ opacity: ".8" }}
