@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom"
+import pic from "../../img/user2-160x160.jpg"
 const Sidebar = () => {
   return (
     <div>
@@ -22,7 +23,7 @@ const Sidebar = () => {
       <div className="user-panel mt-3 pb-3 mb-3 d-flex">
         <div className="image">
           <img
-            src="../../img/user2-160x160.jpg"
+            src={pic}
             className="img-circle elevation-2"
             alt="User Image"
           />

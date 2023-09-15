@@ -1,9 +1,8 @@
 import React from 'react'
-
+import headshot from '../../img/user1-128x128.jpg'
 const Profile = () => {
   return (
     <div>
-
         
 {/* Content Wrapper. Contains page content */}
 <div className="content-wrapper">
@@ -48,7 +47,7 @@ const Profile = () => {
                     </ul>
                   </div>
                   <div className="col-5 text-center">
-                    <img src="../../../img/user1-128x128.jpg" alt="user-avatar" className="img-circle img-fluid" />
+                    <img src={headshot} alt="user-avatar" className="img-circle img-fluid" />
                   </div>
                 </div>
               </div>
