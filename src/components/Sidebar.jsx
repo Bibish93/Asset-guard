@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import pic from "../../img/user2-160x160.jpg"
-import logo from "../../img/AdminLTELogo.png"
+import logo from "../../src/assets/logo.jpg"
 const Sidebar = () => {
   return (
     <div>
