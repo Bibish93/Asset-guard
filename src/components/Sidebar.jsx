@@ -30,7 +30,7 @@ const Sidebar = () => {
           />
         </div>
         <div className="info">
-          <Link to="/profile" className="d-block">
+          <Link to="/Asset-guard/profile" className="d-block">
 
             Dagim Debebe
 
@@ -55,7 +55,7 @@ const Sidebar = () => {
 
          <li className="nav-header">Access</li>
           <li className="nav-item">
-            <Link to="/assets" className="nav-link">
+            <Link to="/Asset-guard/assets" className="nav-link">
               <i className="nav-icon far bi bi-laptop" />
               {/* <i className="fa-solid fa-laptop" /> */}
 
@@ -63,7 +63,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/create-asset" className="nav-link">
+            <Link to="/Asset-guard/create-asset" className="nav-link">
               <i className="nav-icon far bi bi-plus" />
               {/* <i className="fa-solid fa-laptop" /> */}
 
@@ -71,13 +71,13 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="employees" className="nav-link">
+            <Link to="/Asset-guard/employees" className="nav-link">
                <i className="nav-icon far bi bi-person" />
               <p>Employees</p>
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/calendar" className="nav-link">
+            <Link to="/Asset-guard/calendar" className="nav-link">
               <i className="nav-icon far fa-calendar-alt" />
               <p>
                 Calendar
@@ -97,25 +97,25 @@ const Sidebar = () => {
             </Link>
             <ul className="nav nav-treeview">
               <li className="nav-item">
-                <Link to="reservations" className="nav-link">
+                <Link to="/Asset-guard/reservations" className="nav-link">
                   <i className="far fa-circle nav-icon" />
                   <p>reservations</p>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="checkouts" className="nav-link">
+                <Link to="/Asset-guard/checkouts" className="nav-link">
                   <i className="far fa-circle nav-icon" />
                   <p>checkouts</p>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="damages" className="nav-link">
+                <Link to="/Asset-guard/damages" className="nav-link">
                   <i className="far fa-circle nav-icon" />
                   <p>damages</p>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="maintenance" className="nav-link">
+                <Link to="/Asset-guard/maintenance" className="nav-link">
                   <i className="far fa-circle nav-icon" />
                   <p>on maintenance</p>
                 </Link>
@@ -123,7 +123,7 @@ const Sidebar = () => {
             </ul>
           </li>
           <li className="nav-item">
-            <Link to="/registration" className="nav-link">
+            <Link to="/Asset-guard/registration" className="nav-link">
                <i className="nav-icon far bi bi-person-plus" />
               <p>Register new employees</p>
             </Link>

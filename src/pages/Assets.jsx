@@ -1,6 +1,73 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import {useState, useEffect} from 'react'
+import Modal from '../components/Modal'
 
 const Assets = () => {
+    
+    const [assets, setAssets] = useState([])
+    const [openModal, setOpenModal] = useState(false)
+    const [serialNo, setSerialNo] = useState([])
+    const [serialArr, setSerialArr] = useState([])
+    const [selectedSerial, setSelectedSerial] = useState(null)
+   
+
+
+    useEffect(()=>{
+        axios.get("http://localhost:3000/assets").then((response)=>{
+          setAssets(response.data)
+          console.log(assets);
+        })
+      },[])
+
+
+      const [selectedAsset, setSelectedAsset] = useState(null)
+  
+      const handleClick = (id) =>{
+          const selectedAsset = assets.find((asset) => asset.id === id)
+          setSelectedAsset(selectedAsset)
+          // console.log(selectedUser);
+      }
+
+      const getSerialNumbers = (object) =>{
+        const noOfSer = Object.keys(object).length; // Get the length of the object
+        const values = Object.values(object);
+        const selectedValues = [];
+        for (let i = 0; i < noOfSer; i++) {
+            selectedValues.push(values[i]);
+        }
+        return selectedValues;
+          
+      }
+
+      const setSerial = (serials) =>{
+          const serialNoObj = JSON.parse(serials)
+        //   setSerialNo([serialNoObj])
+
+          const serialNumbers = getSerialNumbers(serialNoObj);
+       
+          setSerialArr(serialNumbers)
+      }
+
+    //   const setSerial = (serials) =>{
+
+    //     const serialNoObj = JSON.parse(serials)
+    //     setSerialNo([serialNoObj])
+    //   }
+      useEffect(() => {
+    console.log(serialArr);
+  }, [serialArr]);
+  
+
+  const serialList = () => {
+      const serial = serialArr.map((serial)=>{
+          return  <a class="dropdown-item" key={serial} onClick={()=>setSelectedSerial(serial)} href="#">{serial}</a>
+      })
+
+      return <div>{serial}</div>
+      
+  }
   return (
     <div>
             <>
@@ -40,31 +107,62 @@ const Assets = () => {
                 >
                   <thead>
                     <tr>
-                      <th>Name</th>
+                      <th>Category</th>
+                      <th>Manufacturer</th>
                       <th>Model</th>
-                      <th>serial no</th>
-                      <th>quantity</th>
-                      <th>amount available </th>
-                      <th>amount assigned</th>
+                      <th>Serial No.</th>
                       <th>date purchased</th>
+                      <th>quantity</th>
                       <th>cost(ETB)</th>
+                      <th>assigned IDs</th>
+                      {/* <th>amount assigned</th> */}
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>laptop</td>
-                      <td>HP probook</td>
-                      <td>FG445s</td>
-                      <td>13</td>
-                      <td>7</td>
-                      <td>6</td>
-                      <td>dec 21, 2020</td>
-                      <td>15500</td>
-                    </tr>
+                  {
+                      assets.map((value, key)=>{
+                        return ( <tr key={value.id}>
+                                 <td>{value.category}</td>
+                                 <td>{value.manufacturer} </td>
+                                 
+                                 <td><button className='btn btn-link' 
+                                      onClick={()=>{handleClick(value.id)
+                                      setOpenModal(true)}}
+
+                                      >{value.model}</button></td>
+                                 <td>
+                                 <div className="dropdown show">
+                                    <a className="btn btn-link dropdown-toggle" onClick={()=>setSerial(value.serialNo)} href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        serial NOs
+                                    </a>
+
+                                    <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                       {serialList()}
+                                       
+                                    </div>
+                                    </div>
+                                     
+                                     
+                                 </td>
+                                 <td>{value.datePurchased} </td>
+                                 <td>{value.quantity} </td>
+                                 <td>{value.cost} </td>
+                                 <td>{value.assignedID} </td>
+                                 <td><button className='btn btn-success'
+                                 
+                                  >More</button> </td>
+                          
+                               </tr>)
+                      })
+                    }
                    
-                   
+                  
                   </tbody>
                 </table>
+                    {openModal && <Modal 
+                    closeModal={setOpenModal}
+                    modalInfo={selectedAsset}
+                    selectedSerial={selectedSerial}/> }
               </div>
             </div>
           </div>
@@ -73,6 +171,7 @@ const Assets = () => {
     </section>
   </div>
 </>
+
     </div>
   )
 }

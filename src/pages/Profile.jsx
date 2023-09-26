@@ -1,6 +1,9 @@
 import React from 'react'
 import headshot from '../../img/user1-128x128.jpg'
+
 const Profile = () => {
+
+  
   return (
     <div>
         
@@ -14,10 +17,6 @@ const Profile = () => {
           <h1>Contacts</h1>
         </div>
         <div className="col-sm-6">
-          <ol className="breadcrumb float-sm-right">
-            <li className="breadcrumb-item"><a href="#">Home</a></li>
-            <li className="breadcrumb-item active">Contacts</li>
-          </ol>
         </div>
       </div>
     </div>{/* /.container-fluid */}
@@ -41,6 +40,7 @@ const Profile = () => {
                     <ul className="ml-4 mb-0 fa-ul text-muted">
                       <li className="small"><span className="fa-li"><i className="fas fa-lg fa-building" /></span> Address: Addis Ababa, Yeka Karalo st.</li>
                       <li className="small"><span className="fa-li"><i className="fas fa-lg fa-book" /></span> Department: IT</li>
+                      <li className="small"><span className="fa-li"><i className="fas fa-lg fa-building" /></span> Office location: 231</li>
                       <li className="small"><span className="fa-li"><i className="fas fa-lg fa-user" /></span> Role: Admin</li>
                       <li className="small"><span className="fa-li"><i className="fas fa-lg fa-phone" /></span> Phone #: +251922826240</li>
                       <li className="small"><span className="fa-li"><i className="fas fa-lg fa-envelope" /></span> Email: dagi19deb@gmail.com </li>
@@ -51,16 +51,7 @@ const Profile = () => {
                   </div>
                 </div>
               </div>
-              <div className="card-footer">
-                <div className="text-right">
-                  <a href="#" className="btn btn-sm bg-teal">
-                    <i className="fas fa-comments" />
-                  </a>
-                  <a href="#" className="btn btn-sm btn-primary">
-                    <i className="fas fa-user" /> View Profile
-                  </a>
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>

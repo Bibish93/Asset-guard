@@ -1,9 +1,14 @@
 import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-
+import {useState} from 'react'
 const login = () => {
+
+  const [usernameReg, setUsernamereg] = useState("")
+  const [passwordReg, setPasswordreg] = useState("")
   return (
+
+    
     <div className='d-flex flex-column min-vh-100'>
 
   
@@ -22,7 +27,7 @@ const login = () => {
       <p className="login-box-msg">Sign in as admin</p>
       <form action="../../index3.html" method="post">
         <div className="input-group mb-3">
-          <input type="email" className="form-control" placeholder="Email" />
+          <Field type="email" className="form-control" placeholder="Email" />
           <div className="input-group-append">
             <div className="input-group-text">
               <span className="fas fa-envelope" />
@@ -30,7 +35,7 @@ const login = () => {
           </div>
         </div>
         <div className="input-group mb-3">
-          <input
+          <Field
             type="password"
             className="form-control"
             placeholder="Password"
