@@ -27,42 +27,79 @@ import { useEffect } from 'react'
 import Employee from './pages/Employee'
 import User from './pages/User'
 
+import {AuthContext} from "../helpers/AuthContext"
+
 
 
 function App() {
 
-  // let {id} = useParams()
+  const [authState, setAuthState] = useState(false)
+
+
+  useEffect(() => {
+
+    if(localStorage.getItem("accessToken")){
+      setAuthState(true)
+    }
+
+  }, [])
 
  
 
 
   return (
     <div>
-      <Header />
-      <Sidebar />
-      {/* <Dashboard/> */}
-      <Footer />
 
     
     <div>
-      <Routes>
-        <Route path='/Asset-guard' element={<Dashboard />} />
-        <Route path='/Asset-guard/calendar' element={<Calendar />} />
-        <Route path='/Asset-guard/create-asset' element={<CreateAsset />} />
-        <Route path='/Asset-guard/employees' element={<Employees />} />
-        <Route path='/Asset-guard/profile' element={<Profile />} />
-        <Route path='/Asset-guard/employee/:id' element={<Employee />} />
-        <Route path='/Asset-guard/registration' element={<Registration />} />
-        <Route path='/Asset-guard/assets' element={<Assets />} />
-        <Route path='/Asset-guard/asset-property' element={<AssetProperties />} />
-        <Route path='/Asset-guard/checkouts' element={<Checkouts />} />
-        <Route path='/Asset-guard/reservations' element={<Reservations />} />
-        <Route path='/Asset-guard/damages' element={<Damages />} />
-        <Route path='/Asset-guard/maintenance' element={<Maintenance />} />
-        <Route path='/Asset-guard/create-asset' element={<CreateAsset />} />
-        <Route path='/Asset-guard/user/:id' element={<User />} />
 
-      </Routes>
+      <AuthContext.Provider value={{authState, setAuthState}} >
+
+         {authState && (
+           <>
+
+            <Header />
+            <Sidebar />
+           
+           </>
+         )}
+          {/* <Dashboard/> */}
+          <Footer />
+          
+          
+        <Routes>
+          <Route path='/Asset-guard/login' element={<Login />} />
+            
+          
+          
+
+          
+
+          {authState && (
+            <>
+            <Route path='/Asset-guard' element={<Dashboard />} />
+            <Route path='/Asset-guard/calendar' element={<Calendar />} />
+            <Route path='/Asset-guard/create-asset' element={<CreateAsset />} />
+            <Route path='/Asset-guard/employees' element={<Employees />} />
+            <Route path='/Asset-guard/profile' element={<Profile />} />
+            <Route path='/Asset-guard/employee/:id' element={<Employee />} />
+            <Route path='/Asset-guard/registration' element={<Registration />} />
+            <Route path='/Asset-guard/assets' element={<Assets />} />
+            <Route path='/Asset-guard/asset-property' element={<AssetProperties />} />
+            <Route path='/Asset-guard/checkouts' element={<Checkouts />} />
+            <Route path='/Asset-guard/reservations' element={<Reservations />} />
+            <Route path='/Asset-guard/damages' element={<Damages />} />
+            <Route path='/Asset-guard/maintenance' element={<Maintenance />} />
+            <Route path='/Asset-guard/create-asset' element={<CreateAsset />} />
+            <Route path='/Asset-guard/user/:id' element={<User />} />
+            
+            
+            </>
+          )}
+
+        </Routes>
+      </AuthContext.Provider>
+
     </div>
 
 

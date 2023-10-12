@@ -28,7 +28,7 @@ const Modal = ({closeModal, modalInfo, selectedSerial}) => {
                     <p className="text-muted text-sm"><b>Quantity: </b> {modalInfo.quantity} </p>
                     <p className="text-muted text-sm"><b>Cost(ETB): </b>{modalInfo.cost} </p>
                     <p className="text-muted text-sm"><b>Current Employee: </b><Link to="/profile">Dagim Debebe</Link></p>
-                            
+                    
                   </div>
                    
 
@@ -37,6 +37,16 @@ const Modal = ({closeModal, modalInfo, selectedSerial}) => {
                   <button className="btn btn-link text-center"
                    onClick={()=>closeModal(false)} 
                    type="button ">X</button>
+                   <div className="dropdown show">
+                                    
+
+                                    <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                       <a className='dropdown-item' href="#">Assign this asset</a>
+                                       <a className='dropdown-item' href="#">Reserve this asset</a>
+                                       <a className='dropdown-item' href="#">Revoke this asset</a>
+                                       
+                                    </div>
+                                    </div>
                     <img src={laptop} alt="user-avatar" className="img-circle img-fluid" />
                   </div>
                 </div>

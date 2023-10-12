@@ -76,7 +76,7 @@ const Sidebar = () => {
               <p>Employees</p>
             </Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link to="/Asset-guard/calendar" className="nav-link">
               <i className="nav-icon far fa-calendar-alt" />
               <p>
@@ -84,24 +84,18 @@ const Sidebar = () => {
 
               </p>
             </Link>
-          </li>
+          </li> */}
          
          
+         
+
           <li className="nav-item">
-            <Link to="#" className="nav-link">
-            <i className="nav-icon far bi bi-check2-square" />
-              <p>
-                current actions
-                <i className="fas fa-angle-left right" />
-              </p>
-            </Link>
-            <ul className="nav nav-treeview">
-              <li className="nav-item">
                 <Link to="/Asset-guard/reservations" className="nav-link">
                   <i className="far fa-circle nav-icon" />
                   <p>reservations</p>
                 </Link>
               </li>
+
               <li className="nav-item">
                 <Link to="/Asset-guard/checkouts" className="nav-link">
                   <i className="far fa-circle nav-icon" />
@@ -120,43 +114,13 @@ const Sidebar = () => {
                   <p>on maintenance</p>
                 </Link>
               </li>
-            </ul>
-          </li>
           <li className="nav-item">
             <Link to="/Asset-guard/registration" className="nav-link">
                <i className="nav-icon far bi bi-person-plus" />
               <p>Register new employees</p>
             </Link>
           </li>
-          <li className="nav-item">
-            <Link to="#" className="nav-link">
-            <i className="nav-icon far bi bi-clipboard-data" />
-              <p>
-                Reports
-                <i className="fas fa-angle-left right" />
-              </p>
-            </Link>
-            <ul className="nav nav-treeview">
-              <li className="nav-item">
-                <Link to="#" className="nav-link">
-                  <i className="far fa-circle nav-icon" />
-                  <p>By employee</p>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <a to="pages/mailbox/compose.html" className="nav-link">
-                  <i className="far fa-circle nav-icon" />
-                  <p>By date</p>
-                </a>
-              </li>
-              <li className="nav-item">
-                <Link to="pages/mailbox/read-mail.html" className="nav-link">
-                  <i className="far fa-circle nav-icon" />
-                  <p>By asset</p>
-                </Link>
-              </li>
-            </ul>
-          </li>
+          
         </ul>
           
       </nav>

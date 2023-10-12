@@ -18,7 +18,8 @@ const Employees = () => {
 
   const [employees, setEmployees] = useState([])
   const [openModal, setOpenModal] = useState(false)
-  
+  const [assets, setAssets] = useState([])
+
    
   
   
@@ -26,6 +27,12 @@ const Employees = () => {
     axios.get("http://localhost:3000/register").then((response)=>{
       setEmployees(response.data)
       console.log(employees);
+    })
+
+
+    axios.get("http://localhost:3000/assets").then((response)=>{
+      setAssets(response.data)
+      console.log(assets);
     })
   },[])
   

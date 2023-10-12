@@ -93,8 +93,8 @@ const Registration = () => {
             <Field 
               id='firstName'  
               name='firstname' 
-              onChange={formik.handleChange}
-              value={formik.values.firstname} 
+              // onChange={formik.handleChange}
+              // value={formik.values.firstname} 
               type="text"
               className="form-control"
               placeholder="Enter ..."
@@ -297,7 +297,7 @@ const Registration = () => {
           </div> */}
           <div className="form-group">
           {/* <button className="btn btn-block btn-success" type="submit">Create Account</button> */}
-          <button type='submit'>create account</button>
+          <button className='btn btn-primary' type='submit'>create account</button>
           </div>
 
         </div>
